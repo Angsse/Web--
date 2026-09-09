@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人名片</title>
+    <!-- 引入外部样式文件，实现结构与样式分离 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 外层容器：用于将名片卡片在页面中水平垂直居中 -->
+    <main class="container">
+
+        <!-- 名片卡片主体 -->
+        <section class="card">
+
+            <!-- 圆形头像：使用纯 CSS 渐变背景 + 姓名首字母实现，无需依赖外部图片资源 -->
+            <div class="avatar">张</div>
+
+            <!-- 姓名 -->
+            <h1 class="name">张三</h1>
+
+            <!-- 职位/职称 -->
+            <p class="title">前端开发工程师</p>
+
+            <!-- 分割线：用于在视觉上区分基本信息区与联系方式区 -->
+            <hr class="divider">
+
+            <!-- 联系方式列表 -->
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="icon">✉</span>
+                    <span>zhangsan@example.com</span>
+                </li>
+                <li class="contact-item">
+                    <span class="icon">☎</span>
+                    <span>+86 138 0000 0000</span>
+                </li>
+                <li class="contact-item">
+                    <span class="icon">💬</span>
+                    <span>WeChat: zhangsan_dev</span>
+                </li>
+                <li class="contact-item">
+                    <span class="icon">📍</span>
+                    <span>中国 · 上海</span>
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

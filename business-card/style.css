@@ -1,0 +1,145 @@
+/* ============================================
+   全局样式重置
+   目的：消除不同浏览器默认样式差异，统一盒模型
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   页面整体样式
+   目的：设置背景色，并使用 flex 布局实现
+        名片在水平和垂直方向上都居中显示
+   ============================================ */
+body {
+    /* 使用柔和的浅色渐变背景，衬托卡片主体 */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9edf5 100%);
+    /* 常用无衬线字体栈，中英文均能良好显示 */
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+}
+
+/* ============================================
+   外层容器
+   目的：给卡片预留一定的内边距，避免在小屏幕上贴边
+   ============================================ */
+.container {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ============================================
+   名片卡片主体
+   要点：12px 圆角 + 柔和阴影 + 悬停过渡动画
+   ============================================ */
+.card {
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 12px; /* 卡片圆角 */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* 柔和阴影 */
+    padding: 40px 32px;
+    text-align: center;
+
+    /* 过渡动画：让 transform 和 box-shadow 的变化都平滑进行 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 鼠标悬停时：卡片轻微上浮，并加深阴影，增强层次感 */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* ============================================
+   圆形头像
+   要点：纯 CSS 实现，渐变背景 + 姓名首字母居中显示
+   ============================================ */
+.avatar {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px; /* 水平居中，并与下方姓名保持间距 */
+    border-radius: 50%;  /* 圆形 */
+
+    /* 渐变背景色，简约而不单调 */
+    background: linear-gradient(135deg, #6a9bff 0%, #7c6bff 100%);
+
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+
+    /* 使用 flex 布局让首字母在圆形内水平垂直居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 头像自带轻微投影，与卡片区分开来 */
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.35);
+}
+
+/* ============================================
+   姓名
+   要点：字号最大、字重最粗，作为卡片核心信息
+   ============================================ */
+.name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 6px;
+}
+
+/* ============================================
+   职位/职称
+   要点：字号适中、颜色偏灰，作为次级信息
+   ============================================ */
+.title {
+    font-size: 14px;
+    color: #888888;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   分割线
+   目的：分隔基本信息区与联系方式区
+   ============================================ */
+.divider {
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 24px 0;
+}
+
+/* ============================================
+   联系方式列表
+   要点：去除默认列表样式，纵向排列
+   ============================================ */
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* 每条联系方式之间的间距 */
+}
+
+/* 单条联系方式：图标 + 文字水平排列 */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: #555555;
+}
+
+/* 联系方式前的小图标，固定宽度保证对齐 */
+.icon {
+    font-size: 15px;
+    width: 18px;
+    text-align: center;
+}
