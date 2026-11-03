@@ -1,0 +1,8 @@
+﻿START 10/28/2026 09:37:39
+=== Dujiangyan
+ERR 操作超时。
+=== Wuhou Shrine Chengdu
+ERR 操作超时。
+=== Du Fu Thatched Cottage
+ERR 操作超时。
+=== Mount Qingcheng

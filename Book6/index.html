@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大美成都 - 首页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏：统一导航，所有页面共用 -->
+  <header class="topbar">
+    <div class="container">
+      <div class="logo"><a href="index.html">大美成都</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="current">首页</a></li>
+        <li><a href="food.html">美食页</a></li>
+        <li><a href="scenic.html">景点页</a></li>
+        <li><a href="welcome.html">欢迎页</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+
+      <!-- 首页标题：文字居中，字号大于正文 -->
+      <h1 class="page-title">【大美成都】</h1>
+      <p class="page-subtitle">第一页 · 首页：一座古都的城市温度</p>
+
+      <!-- 浮动框架布局：左侧轮播卡片，右侧简介卡片 -->
+      <section class="float-layout">
+        <div class="float-card carousel-card">
+          <div class="carousel" id="carousel">
+            <ul class="carousel-list">
+              <li><img src="/image/images/古蜀文明.jpg" alt="成都火锅实景照片"></li>
+              <li><img src="/image/images/川剧.jpg" alt="成都火锅实景照片"></li>
+              <li><img src="/image/images/武侯祠.jpg" alt="成都火锅实景照片"></li>
+              <li><img src="/image/images/茶馆.jpg" alt="成都火锅实景照片"></li>
+              <li><img src="/image/images/熊猫1.jpg" alt="成都大熊猫基地实景照片"></li>
+              <li><img src="/image/images/成都2.jpg" alt="成都实景照片"></li>
+              <li><img src="/image/images/宽窄巷子1.jpg" alt="宽窄巷子实景照片"></li>
+              <li><img src="/image/images/锦里古街1.jpg" alt="锦里实景照片"></li>
+              <li><img src="/image/images/都江堰1.jpg" alt="都江堰实景照片"></li>
+              <li><img src="/image/images/火锅1.jpg" alt="成都火锅实景照片"></li>
+              
+            </ul>
+            <button class="carousel-btn prev" id="prevBtn" type="button">&lt;</button>
+            <button class="carousel-btn next" id="nextBtn" type="button">&gt;</button>
+          </div>
+          <p class="carousel-tip">鼠标悬停轮播暂停，点击图片可放大查看</p>
+        </div>
+
+        <div class="float-card intro-card">
+          <h2 class="intro-title">成都简介</h2>
+          <p class="intro-text">
+            成都位于中国西南部，是四川省省会，也是中国西南地区重要的历史文化城市和商业中心。
+            成都有着悠久的历史和丰富的文化底蕴，古蜀文明、茶馆文化、川剧文化、武侯祠文化、
+            宽窄巷子文化和春熙路文化等在这里交织呈现。成都地处亚热带季风气候区，四季分明，
+            空气湿润，气候宜人，因此也被称为“天府之国”的重要城市之一。
+          </p>
+          <p class="intro-text">
+            成都旅游文化的核心特点是古朴与活泼并存。古镇、古寺、古街、古建筑中保留了厚重的
+            西南文化底蕴；而火锅、担担面、串串、茶馆、川剧、天府盆地生态文化又显得热情、
+            开放、鲜活。成都有大熊猫基地、宽窄巷子、锦里、都江堰、春熙路、福成寺、旌门、
+            武侯祠、石羊寺、青城山等许多代表性景点和人文地标。
+          </p>
+          <ul class="intro-list">
+            <li><strong>历史厚重</strong>：古蜀文明，文人雅士，钱唐兴蜀。</li>
+            <li><strong>美食独特</strong>：火锅、担担面、串串、钟水饺与龙抄手。</li>
+            <li><strong>景点丰富</strong>：大熊猫基地、宽窄巷子、锦里、都江堰等。</li>
+            <li><strong>气候宜人</strong>：亚热带季风气候，雨量充沛，四季宜居。</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>大美成都 · 成都旅游文化网站</p>
+    </div>
+  </footer>
+
+  <!-- 图片放大预览弹层 -->
+  <div class="modal" id="imageModal">
+    <img class="modal-img" id="modalImg" alt="图片放大预览">
+    <button class="modal-close" id="modalClose" type="button">&times;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

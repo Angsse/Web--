@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灯箱画廊</title>
+    <style>
+        img{
+            width: 100px;
+        }
+        div{
+            width: 1000px;
+            height: 650px;
+            background-color: #e7caca;
+            margin: 0 auto;
+            text-align: center;
+        }
+        hl{
+            line-height: 80px;
+            color: #e7caca;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            display: inline-block; /* 将列表项设置为行内块元素 */
+            list-style: none; /* 取消列表左侧符号 */ 
+            margin: 0 5px; /* 设置列表项之间的间距 */
+            text-align: center;
+        }
+        a{
+            text-decoration: none; /* 去掉下划线 */
+            color: #9dd6e7; /* 设置链接颜色 */
+            
+        }
+        img:hover{
+           border: 2px solid rgb(6, 6, 6); /* 设置鼠标悬停时的边框样式 */
+        }
+
+        iframe{
+           margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>灯箱画廊</h1>
+        <hr size="5" color="pink">
+        <marqueen behavior ="alternate" direction="left" width="1000px" height="120px" scrollamount="6" onmouseover="this.stop()" onmouseout="this.start()">
+
+            <ul>
+                <li><a href="pic/t1.jpg" target="pic"><img src="pic/t1.jpg" alt=""></a></li>
+                <li><a href="pic/t2.jpg" target="pic"><img src="pic/t2.jpg" alt=""></a></li>
+                <li><a href="pic/t3.jpg" target="pic"><img src="pic/t3.jpg" alt=""></a></li>
+                <li><a href="pic/t4.jpg" target="pic"><img src="pic/t4.jpg" alt=""></a></li>
+                <li><a href="pic/t5.jpg" target="pic"><img src="pic/t5.jpg" alt=""></a></li>
+                <li><a href="pic/t6.jpg" target="pic"><img src="pic/t6.jpg" alt=""></a></li>
+                <li><a href="pic/t7.jpg" target="pic"><img src="pic/t7.jpg" alt=""></a></li>
+            </ul>  
+                
+        </marqueen>
+        <inframe src="" frameborder="0" anme="bigpic" width="680px" height="360px"></inframe>
+    </div>
+</body>
+</html>
